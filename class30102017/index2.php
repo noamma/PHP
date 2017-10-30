@@ -10,9 +10,9 @@
     </head>
     <body>
     <h1><?php print "hello World"; ?> </h1>
-    <h3 
+    <h3>
     <?php 
-    $txt = "Hola mundo!";
+    $txt = "&#161Hola mundo!";
     $x = 7;
     $y = 11.7;
 
@@ -20,6 +20,37 @@
     echo "<br>";
     echo $x;
     echo "<br>";
-    echo $y;?></h3>
+    echo $y;
+    echo $txt."<br>".$x."<br>".$y."<br>";
+    /*casting types
+    $flag = tru;
+    $flag = (boolean) true;
+    $flag = (boolean) "1";
+    $flag = (boolean) 1;
+
+    $n = 7;
+    $n = (integer) 7;
+    $n = (integer) "7";
+    */
+    if (is_string($txt))
+    {
+     echo "Yes";   
+    } else
+    {
+        echo "No";
+    }
+    echo "<br>";
+    echo (is_int($y) ? "Yes" : "No");
+    echo "<br>";
+    $employees = array("Alex", "Doron", "Yaron");
+    foreach($employees as $e){
+        sleep(rand(1,5));
+        $$e = date('l')." ".date('d/m/y')."&emsp;"
+        .$e." started at &emsp;".date('H:i:s');
+    }
+    echo $Alex."<br>";
+    echo $Doron."<br>";
+    echo $Yaron."<br>";
+    ?></h3>
     </body>
 </html>
