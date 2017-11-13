@@ -22,4 +22,11 @@ $keys = array_keys($salaries);
 print_r($salaries);
 print "<br>";
 print_r($keys);
+
+echo "<br><br>";
+
+if (array_key_exists("nir", $salaries))
+{
+    echo "Nir's salary is ".$salaries['nir']."<br>";
+}
 ?>

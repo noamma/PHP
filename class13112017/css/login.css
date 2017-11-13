@@ -1,0 +1,13 @@
+fieldset{
+    background-color:skyblue;
+    height: 170px;
+    width: 170px;
+    
+}
+input{
+    padding: 10px;
+    margin: 10px;
+}
+input[type="submit"]{
+    margin-left: 50px;
+}
