@@ -1,7 +1,17 @@
 <?php
 if(!empty($_GET)){
     if(isset($_GET["mynumber"])){
-        echo "myNumber is: ".$_GET["mynumber"];
+        $number=$_GET["number"];
+        $mynumber=$_GET["mynumber"];
+        $turn=$_GET["turn"];
+        if ($number==$mynumber){
+            echo "<p>Correct !<br>you have gussed the number in ".$turn." turns</p>";
+            exit();
+        }else{
+            $turn=$turn+1;
+        }
+       // echo "myNumber is: ".$_GET["mynumber"];
+         
     }
 }else{
     $number = mt_rand(1,100);
