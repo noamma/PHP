@@ -1,4 +1,9 @@
 <?php
+function newSession(){
+    $result = 0;
+    $points = 0;
+    $turn = 1;
+}
 if(!empty($_GET)){
     $num1 = $_GET['num1'];
     $num2 = $_GET['num2'];
@@ -21,9 +26,7 @@ if(!empty($_GET)){
     $question = $num1." * ".$num2." = ";
 }
 }else{
-    $result = 0;
-    $points = 0;
-    $turn = 1;
+    
     $msg="Welcome to Multiplication Fun !<br>";
     $question = $num1." * ".$num2." = ";    
 }
