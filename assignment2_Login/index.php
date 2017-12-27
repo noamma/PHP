@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-<div><span>Welcome, <?php $usr?></span><a href="login.php"</a></div>    
+<div><span>Welcome, <?php $usr ?> </span><a href="login.php"></a></div>    
 </body>
 </html>
-
-
-
