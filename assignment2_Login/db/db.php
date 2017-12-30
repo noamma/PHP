@@ -1,9 +1,18 @@
-<?php
+<?
 define("HOST", "localhost");
 define("USER", "root");
 define("PASS", "");
-define("DB", "phpdb");
+define("DB", "securelogin");
 
-$con = mysqli_connect(HOST, USER, PASS, DB);
-mysqli_set_charset($con, "utf8");
+$dbh = new PDO('mysql:host='.HOST.';dbname='.DB, USER, PASS);
+
+$stmt = $dbh->prepare("SELECT * FROM users;");
+$stmt->execute();
+
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+/*foreach($rows as $row)
+{
+    echo$row['user_username'];
+}*/
 ?>

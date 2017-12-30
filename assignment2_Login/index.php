@@ -1,15 +1,18 @@
-<<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<div><span>Welcome, <?php $usr?></span><a href="login.php"</a></div>    
-</body>
-</html>
+<?
+require_once('conf/header.php');
 
+if (func::checkLoginState($dbh))
+{
+    //echo 'Welcome, ' . $_SESSION['username'] . ' !';
 
+    ?>
+    <div><span>Hello, <? $_SESSION['username'] ?> ! </span><a href="login.php">Logout</a></div>
+    <?
+} else
+    {
+    header("Location: login/login.php");
+    exit();
+    }
+
+?>
 
