@@ -53,8 +53,8 @@
                             <input type="text" placeholder="Enter Username" name="usr" required autofoucus>
                             <lable><b>Password</b></lable>
                             <input type="password" placeholder="Enter Password" name="pswd" required>
-
                             <button type="submit">Login</button>
+                            <a href="">Forgot my password</a>
                         </div>
                     </form>
                 </body>

@@ -15,7 +15,8 @@ if(!empty($_GET))
             $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             foreach($rows as $row)
             {
-                $hint.= $row['countryname']." ";
+                $country = $row['countryname'];
+                $hint.= "<div> <lable>$country</lable><img src='img/$country.png'></div>" ;
             }
             echo $hint === "" ? "no resoult" : $hint;
             exit();
