@@ -24,18 +24,21 @@ if (!empy($_GET))
                 </ul>
             </div>
             <div id="message">
-                <input type="text" id="msg" placeholder="Enter your message">
+                <input type="text" id="msgtxt" placeholder="Enter your message">
                 <button id="sendBtn" onclick="sendMessage()">Send</button>
             </div>
         </div>
         <script>
-            var msg="";
+            msg="";
             function sendMessage()
             {
-                msg = document.getElementById("msg").innerHTML;
+                msg = document.getElementById("msgtxt").value;
                 ajaxMessage(msg);
+                //alert(msg);
             }
-            var getMessages = setInterval(ajaxMessage, 1000);
+            
+            getMessages = setInterval(ajaxMessage, 1000);
+            
             function ajaxMessage(msg)
             {
                // alert();
