@@ -1,16 +1,18 @@
 <?
     require_once("db/db.php");
-    $msg=" ";
+    $msg="";
     if(!empty($_GET))
     {
-        if(isset($_GET['msg']))
+        if(isset($_GET['msg']) && isset($_GET['usr']))
         {
-            if(!empty($_GET['msg']))
+            if(!empty($_GET['msg']) && !empty($_GET['usr']))
             {
                 $msg=$_GET['msg'];
-                $qry="INSERT INTO `messages` (`id`, `UserName`, `message`, `time`) VALUES (NULL, 'noamma', ".$msg.", NULL);";
+                $usr=$_GET['usr'];
+                echo $usr;
+                $qry="INSERT INTO `messages` (`id`, `UserName`, `message`, `time`) VALUES (NULL, '".$usr."', '".$msg."', NULL);";
                 $stmt = $dbh->prepare($qry);
-                $stmt->execute(array(':msg' => $msg));
+                $stmt->execute();
             }
         }
     }
